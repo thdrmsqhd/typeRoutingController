@@ -1,12 +1,13 @@
 import "reflect-metadata";
-import {createExpressServer} from "routing-controllers";
+import {createExpressServer, useContainer} from "routing-controllers";
 import {BoardController} from "./controllers/BoardController"
-
+import { Container } from "typedi"
 
 const app = createExpressServer({
     controllers:[BoardController],
 })
 
+useContainer(Container);
 
 app.set("view engine", "hbs");
 
