@@ -12,8 +12,14 @@ const app = createExpressServer({
 useContainer(Container);
 
 const sequelize = new Sequelize({
-    dialect:"mysql"
+    dialect:"mysql",
+    database: 'post',
+    username: 'root',
+    password: '0515',
+    models:[Board]
 })
+
+sequelize.sync();
 
 app.set("view engine", "hbs");
 

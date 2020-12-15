@@ -14,15 +14,15 @@ const sequelize_typescript_1 = require("sequelize-typescript");
 let Board = class Board extends sequelize_typescript_1.Model {
 };
 __decorate([
-    sequelize_typescript_1.Column,
+    sequelize_typescript_1.Column(sequelize_typescript_1.DataType.STRING),
     __metadata("design:type", Object)
 ], Board.prototype, "title", void 0);
 __decorate([
-    sequelize_typescript_1.Column,
+    sequelize_typescript_1.Column(sequelize_typescript_1.DataType.STRING),
     __metadata("design:type", Object)
 ], Board.prototype, "content", void 0);
 __decorate([
-    sequelize_typescript_1.Column,
+    sequelize_typescript_1.Column(sequelize_typescript_1.DataType.STRING),
     __metadata("design:type", Object)
 ], Board.prototype, "writer", void 0);
 Board = __decorate([

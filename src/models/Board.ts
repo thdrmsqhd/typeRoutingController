@@ -1,13 +1,13 @@
-import {Column, Model, Table} from "sequelize-typescript"
+import {Column, DataType, Model, Table} from "sequelize-typescript"
 
 @Table
 export class Board extends Model{
-    @Column
+    @Column(DataType.STRING)
     title: string | undefined ;
 
-    @Column
+    @Column(DataType.STRING)
     content: string | undefined;
 
-    @Column
+    @Column(DataType.STRING)
     writer: string | undefined;
 }

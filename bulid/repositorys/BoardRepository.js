@@ -8,8 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BoardRepository = void 0;
 const typedi_1 = require("typedi");
+const Board_1 = require("../models/Board");
 let BoardRepository = class BoardRepository {
     boardList() {
+        console.log("boardList" + Board_1.Board.findAll());
         return "it Repository BoardList";
     }
 };
