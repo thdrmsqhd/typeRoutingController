@@ -11,28 +11,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BoardController = void 0;
 require("reflect-metadata");
-var routing_controllers_1 = require("routing-controllers");
-var BoardService_1 = require("../services/BoardService");
-var BoardController = /** @class */ (function () {
-    function BoardController(service) {
+const routing_controllers_1 = require("routing-controllers");
+const BoardService_1 = require("../services/BoardService");
+let BoardController = class BoardController {
+    constructor(service) {
         this.service = service;
     }
-    BoardController.prototype.boardList = function () {
+    boardList() {
         console.log("boardList");
         console.log(this.service.boardList());
-    };
-    __decorate([
-        routing_controllers_1.Get("/"),
-        routing_controllers_1.Render("boardList"),
-        __metadata("design:type", Function),
-        __metadata("design:paramtypes", []),
-        __metadata("design:returntype", void 0)
-    ], BoardController.prototype, "boardList", null);
-    BoardController = __decorate([
-        routing_controllers_1.Controller(),
-        __metadata("design:paramtypes", [BoardService_1.BoardService])
-    ], BoardController);
-    return BoardController;
-}());
+    }
+};
+__decorate([
+    routing_controllers_1.Get("/"),
+    routing_controllers_1.Render("boardList"),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], BoardController.prototype, "boardList", null);
+BoardController = __decorate([
+    routing_controllers_1.Controller(),
+    __metadata("design:paramtypes", [BoardService_1.BoardService])
+], BoardController);
 exports.BoardController = BoardController;
 //# sourceMappingURL=BoardController.js.map

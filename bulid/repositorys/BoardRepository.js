@@ -7,17 +7,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BoardRepository = void 0;
-var typedi_1 = require("typedi");
-var BoardRepository = /** @class */ (function () {
-    function BoardRepository() {
-    }
-    BoardRepository.prototype.boardList = function () {
+const typedi_1 = require("typedi");
+let BoardRepository = class BoardRepository {
+    boardList() {
         return "it Repository BoardList";
-    };
-    BoardRepository = __decorate([
-        typedi_1.Service()
-    ], BoardRepository);
-    return BoardRepository;
-}());
+    }
+};
+BoardRepository = __decorate([
+    typedi_1.Service()
+], BoardRepository);
 exports.BoardRepository = BoardRepository;
 //# sourceMappingURL=BoardRepository.js.map

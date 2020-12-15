@@ -10,21 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BoardService = void 0;
-var typedi_1 = require("typedi");
-var BoardRepository_1 = require("../repositorys/BoardRepository");
-var BoardService = /** @class */ (function () {
-    function BoardService(repository) {
+const typedi_1 = require("typedi");
+const BoardRepository_1 = require("../repositorys/BoardRepository");
+let BoardService = class BoardService {
+    constructor(repository) {
         this.repository = repository;
     }
-    BoardService.prototype.boardList = function () {
+    boardList() {
         console.log("it service BoardList");
         return this.repository.boardList();
-    };
-    BoardService = __decorate([
-        typedi_1.Service(),
-        __metadata("design:paramtypes", [BoardRepository_1.BoardRepository])
-    ], BoardService);
-    return BoardService;
-}());
+    }
+};
+BoardService = __decorate([
+    typedi_1.Service(),
+    __metadata("design:paramtypes", [BoardRepository_1.BoardRepository])
+], BoardService);
 exports.BoardService = BoardService;
 //# sourceMappingURL=BoardService.js.map
